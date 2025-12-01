@@ -1,0 +1,13 @@
+import mongoose from "mongoose";
+
+const foodSchema = new mongoose.Schema({
+    name: { type: String, required: true },
+    description: { type: String, required: true },
+    price: { type: Number, required: true },                        //make the structure of the database
+    image: { type: String, required: true },
+    category: { type: String, required: true },
+});
+
+const foodmodel =mongoose.model.food || mongoose.model("food", foodSchema);   //make the model with name food and if it already exists use that
+
+export default foodmodel;

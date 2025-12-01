@@ -1,0 +1,124 @@
+/* .sidebar{
+    width: 18%;
+    min-height: 100vh;
+    border: 1.5px solid #a9a9a9;
+    border-top: 0;
+    font-size: max(1vw,10px);
+}
+.sidebar-options{
+    padding-top: 50px;
+    padding-left: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sidebar-option{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #a9a9a9;
+    border-right: 0;
+    padding: 8px 10px;
+    border-radius: 3px 0px 0px 3px;
+    cursor: pointer;
+}
+.sidebar-option.active{
+    background-color: #fff0ed;          
+    border-color: tomato;
+}
+
+@media (max-width:900px) {
+    .sidebar-option p{
+        display: none;
+    }
+}
+@media (max-width:450px) {
+    .sidebar-option img{
+        width: 17px;
+    }
+} */
+ :root {
+  --accent: #ff7a00;
+  --accent-light: #fff1e3;
+  --dark: #222;
+  --muted: #777;
+  --radius: 12px;
+  --bg: #ffffff;
+  --sidebar-bg: #fff7ef;
+  --transition: 0.2s ease;
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Sidebar container */
+.sidebar {
+  width: 220px;
+  min-height: 100vh;
+  background: var(--sidebar-bg);
+  padding: 22px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-right: 1px solid #ffd2b9;
+  box-shadow: var(--shadow);
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+}
+
+/* Options wrapper */
+.sidebar-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Individual option */
+.sidebar-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  color: var(--dark);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: var(--transition);
+}
+
+/* Icon */
+.sidebar-option img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Hover effect */
+.sidebar-option:hover {
+  background: var(--accent-light);
+  color: var(--accent);
+  transform: translateX(4px);
+}
+
+/* ACTIVE LINK (NavLink auto adds .active class 🎉) */
+.sidebar-option.active {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(255, 122, 0, 0.25);
+}
+
+.sidebar-option.active img {
+  filter: brightness(0) invert(1); /* make icon white */
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px;
+    padding: 18px 10px;
+  }
+  
+  .sidebar-option {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+}
