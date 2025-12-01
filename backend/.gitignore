@@ -1,0 +1,6 @@
+# .gitignore file
+# Ignore environment variable file
+.env
+
+# Common dependencies/build artifacts (optional, but good practice)
+node_modules/
