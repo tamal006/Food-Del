@@ -33,6 +33,3 @@ app.get('/', (req, res) => {
 app.listen(port, () => console.log(`Listening on http://localhost:${port}`));
 
 
-//gnigGBI7iWCKgAQ6
-//tamalkumarkhan006_db_user
-//mongodb+srv://tamalkumarkhan006_db_user:gnigGBI7iWCKgAQ6@cluster0.pswxhtz.mongodb.net/?appName=Cluster0
